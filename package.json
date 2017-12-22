@@ -1,0 +1,15 @@
+{
+  "name": "a-template",
+  "version": "1.0.0",
+  "description": "A Template",
+  "scripts": {
+    "start": "node compiler/server.js"
+  },
+  "author": "ym99",
+  "license": "GNU-3",
+  "devDependencies": {
+    "express": "^4.15.2"
+  },
+  "dependencies": {
+  }
+}

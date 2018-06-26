@@ -23,29 +23,38 @@
 <table bgcolor="#00FF00" border= "1">
   
   <tr>
-    <td><img src="imgs/Duck.jpg"></td>
-    <td><img src="imgs/Garfield.jpg"></td> 
-    <td><img src="imgs/Goofy.jpg"></td>
+    <td onclick="hideCell(this)"><img src="imgs/Duck.jpg"></td>
+    <td onclick="hideCell(this)"><img src="imgs/Garfield.jpg"></td> 
+    <td onclick="hideCell(this)"><img src="imgs/Goofy.jpg"></td>
   
   </tr>
   
   <tr>
-    <td><img src="imgs/pony.jpg"></td>
-    <td><img src="imgs/TandJ.jpg"></td>
-    <td><img src="imgs/minion.jpg"></td>
+    <td onclick="hideCell(this)"><img src="imgs/pony.jpg"></td>
+    <td onclick="hideCell(this)"><img src="imgs/TandJ.jpg"></td>
+    <td onclick="hideCell(this)"><img src="imgs/minion.jpg"></td>
   </tr>
   
   <tr>
-    <td><img src="imgs/Paw.jpg"></td> 
-    <td><img src="imgs/MandB.jpg"></td>
-    <td><img src="imgs/peter.jpg"></td>
+    <td onclick="hideCell(this)"><img src="imgs/Paw.jpg"></td> 
+    <td onclick="hideCell(this)"><img src="imgs/MandB.jpg"></td>
+    <td onclick="hideCell(this)"><img src="imgs/peter.jpg"></td>
   </tr>
   
   <tr>
-    <td><img src="imgs/spike.jpg"></td> 
-    <td><img src="imgs/Mickey.jpg"></td>
-    <td><img src="imgs/O.jpg"></td>
+    <td onclick="hideCell(this)"><img src="imgs/spike.jpg"></td> 
+    <td onclick="hideCell(this)"><img src="imgs/Mickey.jpg"></td>
+    <td onclick="hideCell(this)"><img src="imgs/O.jpg"></td>
   </tr>
+  
+  <script>
+   function hideCell(td) {
+     td.innerHTML="";
+   }
+  </script>
+
 </table>
+
 </body>
+
 </html>

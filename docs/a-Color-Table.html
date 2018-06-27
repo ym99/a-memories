@@ -50,9 +50,16 @@
   </tr>
   
   <script>
+    var backupImgs = [
+      '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Football_iu_1996.jpg/1200px-Football_iu_1996.jpg">',
+      '<img src="https://cdn2.vox-cdn.com/thumbor/Joaxrmbt2AqpZlsH8RPRlH_5aSM=/0x376:3597x2399/1100x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/55486613/GettyImages-634583072.0.jpg">'
+    ];
    function hideCell(td) {
-     td.innerHTML="";
+     var newImg = backupImgs.shift();
+     backupImgs.push(td.innerHTML);
+     td.innerHTML= newImg;
    }
+  
   </script>
 
 </table>

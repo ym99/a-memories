@@ -59,7 +59,9 @@
       '<img src="https://cdn.vox-cdn.com/uploads/chorus_asset/file/10153759/1R5A7018.jpg">'
     ];
    function hideCell(td) {
-     var newImg = backupImgs.shift();
+     var index = Math.floor(Math.random() * backupImgs.length);
+     var newImg = backupImgs[index];
+     backupImgs.splice(index, 1);
      backupImgs.push(td.innerHTML);
      td.innerHTML= newImg;
    }

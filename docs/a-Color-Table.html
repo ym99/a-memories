@@ -61,7 +61,7 @@
    function hideCell(td) {
      var index = Math.floor(Math.random() * backupImgs.length);
      var newImg = backupImgs[index];
-     backupImgs.splice(index, 1);
+     backupImgs.splice(index, 1); 
      backupImgs.push(td.innerHTML);
      td.innerHTML= newImg;
    }

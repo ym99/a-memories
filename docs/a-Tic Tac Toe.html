@@ -4,6 +4,17 @@
 
 <style>
 
+    table{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    td{
+      width: 60px;
+      height: 60px;
+      border: 1px solid black;
+    }
 
 </style>
 
@@ -11,23 +22,34 @@
 
 <body>
     
-    <table border="100" id="board">
-        <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-          </tr>
-        <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-          </tr>
-        <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-          </tr>
-        </table>
+    <table id="board">
+    <tr>
+        <td onclick="img"></td>
+        <td onclick="img"></td>
+        <td onclick="img"></td>
+    </tr>
+    
+    <tr>
+        <td onclick="img"></td>
+        <td onclick="img"></td>
+        <td onclick="img"></td>
+    </tr>
+        
+    <tr>
+        <td onclick="img"></td>
+        <td onclick="img"></td>
+        <td onclick="img"></td>
+    </tr>
+        
+    </table>
+    
+    <script>
+    function img(td) { 
+
+    }
+ 
+    </script>
+
 </body>
 
 </html>

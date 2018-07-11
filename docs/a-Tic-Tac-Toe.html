@@ -42,14 +42,29 @@
     </table>
     
     <script>
-    function img(td) {
+    
+    var isFirstUser = true;
+
+    function img(x) {
     //  var first = "X";
     //  var second = "O";
     //  var counter = 0; 
     //  if(counter%2 == 0){
     //  }
+
+        var old = x.innerHTML;
+
+        if(old === "X" || old === "O"){
+            return;
+        }
      
-            
+        if(isFirstUser){
+            x.innerHTML =  "X";
+            isFirstUser = false;
+        } else {
+            x.innerHTML = "O";
+            isFirstUser = true;
+        }
     }
  
     </script>

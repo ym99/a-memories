@@ -4,16 +4,27 @@
 
 <style>
 
+    body::after {
+    background: url(https://usercontent1.hubstatic.com/9211686_f520.jpg);
+    content: "";
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;   
+    }
+
     table{
         width: 100%;
         height: 100%;
         font-size: 3cm;
-        color: white;
     }
 
 
     td{
-      border: 1px solid white;
+      border: 1px solid black;
       width: 1em;
       height: 1em;
       text-align: center;
@@ -31,7 +42,7 @@
 
 </head>
 
-<body class="firstUser">
+<body>
     
     <table id="board">
     <tr>
@@ -69,14 +80,14 @@
             x.innerHTML =  "X";
             isFirstUser = false;
             
-            document.body.classList.remove("firstUser");
-            document.body.classList.add("secondUser");
+            // document.body.classList.remove("firstUser");
+            // document.body.classList.add("secondUser");
         } else {
             x.innerHTML = "O";
             isFirstUser = true;
 
-            document.body.classList.remove("secondUser");
-            document.body.classList.add("firstUser");
+            // document.body.classList.remove("secondUser");
+            // document.body.classList.add("firstUser");
         }
     }
  

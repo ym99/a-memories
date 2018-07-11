@@ -8,21 +8,30 @@
         width: 100%;
         height: 100%;
         font-size: 3cm;
+        color: white;
     }
 
 
     td{
-      border: 1px solid black;
+      border: 1px solid white;
       width: 1em;
       height: 1em;
       text-align: center;
+    }
+
+    .firstUser{
+        background-image: url(https://usercontent1.hubstatic.com/9211686_f520.jpg);
+    }
+
+    .secondUser{
+        background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Chicago_Bulls_logo.svg/1200px-Chicago_Bulls_logo.svg.png);
     }
 
 </style>
 
 </head>
 
-<body>
+<body class="firstUser">
     
     <table id="board">
     <tr>
@@ -50,12 +59,6 @@
     var isFirstUser = true;
 
     function img(x) {
-    //  var first = "X";
-    //  var second = "O";
-    //  var counter = 0; 
-    //  if(counter%2 == 0){
-    //  }
-
         var old = x.innerHTML;
 
         if(old === "X" || old === "O"){
@@ -65,9 +68,15 @@
         if(isFirstUser){
             x.innerHTML =  "X";
             isFirstUser = false;
+            
+            document.body.classList.remove("firstUser");
+            document.body.classList.add("secondUser");
         } else {
             x.innerHTML = "O";
             isFirstUser = true;
+
+            document.body.classList.remove("secondUser");
+            document.body.classList.add("firstUser");
         }
     }
  

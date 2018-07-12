@@ -69,6 +69,14 @@
     
     var isFirstUser = true;
 
+    function isEqual(x, y, ch) {
+        var table = document.getElementById("board");
+        var row = table.children[0].children[y];
+        var cell = row.children[x];
+        var value = cell.innerHTML;
+        return value === ch;
+    }
+
     function img(x) {
         var old = x.innerHTML;
 
@@ -82,12 +90,44 @@
             
             // document.body.classList.remove("firstUser");
             // document.body.classList.add("secondUser");
+            if (   isEqual(0, 0, "X") && isEqual(1, 0, "X") && isEqual(2, 0, "X") 
+                || isEqual(0, 1, "X") && isEqual(1, 1, "X") && isEqual(2, 1, "X") 
+                || isEqual(0, 2, "X") && isEqual(1, 2, "X") && isEqual(2, 2, "X")
+
+                || isEqual(0, 0, "X") && isEqual(0, 1, "X") && isEqual(0, 2, "X")
+                || isEqual(1, 0, "X") && isEqual(1, 1, "X") && isEqual(1, 2, "X")
+                || isEqual(2, 0, "X") && isEqual(2, 1, "X") && isEqual(2, 2, "X")
+
+                || isEqual(0, 0, "X") && isEqual(1, 1, "X") && isEqual(2, 2, "X")
+                || isEqual(0, 2, "X") && isEqual(1, 1, "X") && isEqual(2, 0, "X")
+            )
+            {
+                window.alert("X wins");
+                return;
+            }
+
         } else {
             x.innerHTML = "O";
             isFirstUser = true;
 
             // document.body.classList.remove("secondUser");
             // document.body.classList.add("firstUser");
+
+             if (  isEqual(0, 0, "O") && isEqual(1, 0, "O") && isEqual(2, 0, "O") 
+                || isEqual(0, 1, "O") && isEqual(1, 1, "O") && isEqual(2, 1, "O") 
+                || isEqual(0, 2, "O") && isEqual(1, 2, "O") && isEqual(2, 2, "O")
+
+                || isEqual(0, 0, "O") && isEqual(0, 1, "O") && isEqual(0, 2, "O")
+                || isEqual(1, 0, "O") && isEqual(1, 1, "O") && isEqual(1, 2, "O")
+                || isEqual(2, 0, "O") && isEqual(2, 1, "O") && isEqual(2, 2, "O")
+
+                || isEqual(0, 0, "O") && isEqual(1, 1, "O") && isEqual(2, 2, "O")
+                || isEqual(0, 2, "O") && isEqual(1, 1, "O") && isEqual(2, 0, "O")
+            )
+            {
+                window.alert("O wins");
+                return;
+            }
         }
     }
  

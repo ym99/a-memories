@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+        <body>
+                <form>
+                    Enter your weight on Earth in kg:<br>
+                    <input type="text" id="Earth" name="earth">
+                    <br>
+                    Moon:<br>
+                    <input type="text" id="Moon" name="moon">
+                    <br>
+                    <input type="submit" id="button" value="Caculate">
+                </form>
+            </body>
+            
+            <script>
+                    var earth=document.getElementById("Earth");
+                    var moon=document.getElementById("Moon")
+
+                    document.getElementById("button").onclick = function (e) {
+                    e.preventDefault();
+                    moon.value=(earth.value)*(0.165);
+
+                };
+        </script>
+
+        </html>

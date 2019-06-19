@@ -5,8 +5,35 @@
                     Enter your weight on Earth in kg:<br>
                     <input type="text" id="Earth" name="earth">
                     <br>
+                    Mercury:<br>
+                    <input type="text" id="Mercury" name="mercury">
+                    <br>
+                    Venus:<br>
+                    <input type="text" id="Venus" name="venus">
+                    <br>
                     Moon:<br>
                     <input type="text" id="Moon" name="moon">
+                    <br>
+                    Mars:<br>
+                    <input type="text" id="Mars" name="mars">
+                    <br>
+                    Jupiter:<br>
+                    <input type="text" id="Jupiter" name="jupiter">
+                    <br>
+                    Saturn:<br>
+                    <input type="text" id="Saturn" name="saturn">
+                    <br>
+                    Uranus:<br>
+                    <input type="text" id="Uranus" name="uranus">
+                    <br>
+                    Neptune:<br>
+                    <input type="text" id="Neptune" name="neptune">
+                    <br>
+                    Pluto:<br>
+                    <input type="text" id="Pluto" name="pluto">
+                    <br>
+                    Sun:<br>
+                    <input type="text" id="Sun" name="sun">
                     <br>
                     <input type="submit" id="button" value="Caculate">
                 </form>
@@ -14,11 +41,30 @@
             
             <script>
                     var earth=document.getElementById("Earth");
-                    var moon=document.getElementById("Moon")
+                    var moon=document.getElementById("Moon");
+                    var mercury=document.getElementById("Mercury");
+                    var venus=document.getElementById("Venus");
+                    var mars=document.getElementById("Mars");
+                    var jupiter=document.getElementById("Jupiter");
+                    var saturn=document.getElementById("Saturn");
+                    var uranus=document.getElementById("Uranus");
+                    var neptune=document.getElementById("Neptune");
+                    var pluto=document.getElementById("Pluto");
+                    var sun=document.getElementById("Sun");
+
 
                     document.getElementById("button").onclick = function (e) {
                     e.preventDefault();
                     moon.value=(earth.value)*(0.165);
+                    mercury.value=(earth.value)*(0.38);
+                    venus.value=(earth.value)*(0.91);
+                    mars.value=(earth.value)*(0.38);
+                    jupiter.value=(earth.value)*(2.34);
+                    saturn.value=(earth.value)*(1.06);
+                    uranus.value=(earth.value)*(0.92);
+                    neptune.value=(earth.value)*(1.19);
+                    pluto.value=(earth.value)*(0.06);
+                    sun.value=(earth.value)*(27.08);
 
                 };
         </script>
